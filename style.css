@@ -1,0 +1,392 @@
+/* colors used in my website: #145e49: dark green, #f4be0b: gold, #fcf1de: beige
+#955225: semi-brown */
+/* general rules */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    color: #fff;
+} 
+.title {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: clamp(1.5rem, 1.286rem + 1.071vw, 3rem);
+}
+/* header */
+header {
+    background-color: #145e49;
+    padding: 8px;
+}
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-inline: auto;
+    max-width: 1200px;
+}
+header .logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+header nav ul {
+    display: flex;
+    flex-direction: column;
+}
+header nav ul li {
+    margin-bottom: 12px;
+}
+header .logo-container img {
+    width: clamp(4.375rem, 3.431rem + 4.721vw, 11.25rem);
+    height: auto;
+}
+header .logo-container span .unique-word {
+    color: #f4be0b;
+}
+header .logo-container span {
+    font-size: clamp(1.25rem, 1.078rem + 0.858vw, 2.5rem);
+    font-weight: bold;
+}
+header nav ul {
+    list-style: none;
+    font-size: clamp(1rem, 0.863rem + 0.687vw, 2rem);
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.5s;
+}
+header nav ul li a:hover {
+    color: #f4be0b;
+}
+@media (min-width: 768px) {
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header .container nav ul {
+        flex-direction: row;
+    }
+    header .container .logo-container {
+        margin-bottom: 0;
+    }
+    header .container nav ul li {
+        margin-right: 16px;
+        margin-bottom: 0;
+    }
+}
+/* hero styling */
+.hero {
+    background-image: linear-gradient(rgb(0 0 0 / 0.2)), url('fikh-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    height: 100dvh;
+}
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    max-width: 1200px;
+    margin-inline: auto;
+    height: 100%;
+    text-shadow: 0 0 3px rgb(0 0 0);
+    
+}
+.hero .container h1 {
+    font-size: clamp(1.24rem, 0.846rem + 1.971vw, 4rem); 
+    margin-bottom: 16px;
+}
+.hero .container p:nth-child(2) {
+    font-size: clamp(1rem, 0.714rem + 1.429vw, 3rem); 
+    margin-bottom: 12px
+}
+.hero .container p:nth-child(3) {
+    font-size: clamp(1rem, 0.8rem + 1vw, 2.4rem);
+    margin-bottom: 16px
+}
+.hero .container a {
+    text-decoration: none;
+    color: inherit;
+    background-color: #f4be0b;
+    border-radius: 8px;
+    display: inline-block;
+    padding: clamp(0.625rem, 0.536rem + 0.446vw, 1.25rem);
+    font-weight: bold;
+    font-size: clamp(1rem, 0.714rem + 1.429vw, 3rem);
+    text-shadow: 0 0 1px rgb(0 0 0);
+    transition: 0.5s;
+}
+.hero .container h1::before {
+    content: '" ';
+    white-space: nowrap;
+}
+.hero .container h1::after {
+    content: ' "';
+    white-space: nowrap;
+
+}
+.hero .container a:hover {
+    background-color: transparent;
+    border: 1px solid #f4be0b;
+}
+/* about section styling */
+#about {
+    background-color: #fcf1de;
+    color: #000;
+    padding: 20px;
+}
+#about .container {
+    width: min(80%, 1200px);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#about .container .about-cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#about .container .about-text {
+    display: flex;
+    flex-direction: column;
+}
+#about .container p {
+    font-size: clamp(1rem, 0.914rem + 0.429vw, 1.6rem);
+}
+#about .container .about-text p {
+    margin-bottom: 16px;
+}
+#about .container .about-cards div {
+    margin-bottom: clamp(0.75rem, 0.679rem + 0.357vw, 1.25rem);
+    background-color: #fff;
+    padding: 12px;
+}
+#about .container .about-cards div h3 {
+    margin-bottom: 8px;
+    font-size: clamp(1.17rem, 1.051rem + 0.593vw, 2rem);
+}
+#about .container .about-cards div p{
+    margin-bottom: 8px;
+}
+@media (min-width: 989px) {
+    #about .container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    #about .container .about-cards {
+        width: 100%;
+    }
+    #about .container .about-cards {
+        margin-right: clamp(1rem, 0.929rem + 0.357vw, 1.5rem);
+    }
+}
+/* schedule section styling */
+#schedule {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+}
+#schedule .container {
+    width: min(80%, 1200px);
+    margin-inline: auto;
+    overflow-x: auto;
+}
+#schedule .container h3 {
+    margin-bottom: 12px;
+}
+#schedule .container table {
+    margin-bottom: 12px;
+    background-color: #fcf1de;
+    width: 100%;
+    border-spacing: 0;
+}
+#schedule .container table tr th,
+#schedule .container table tr td {
+    border: 0.5px solid #333;
+    padding: 10px;
+}
+#schedule .container table tr td {
+    font-weight: 500;
+}
+#schedule .container table tbody tr:nth-child(2) td:nth-child(3) {
+    text-align: center;
+}
+#schedule .container table thead tr:first-child {
+    background-color: #3db177;
+}
+@media (min-width: 1400px) {
+    #schedule {
+        font-size: 24px;
+    }
+}
+@media (min-width: 1920px) {
+    #schedule {
+        font-size: 28px;
+    }
+}
+/* register section styling */
+#register {
+    background-color: #fcf1de;
+    color: #000;
+    padding: 20px;
+}
+#register .container {
+    width: min(80%, 600px);
+    margin-inline: auto;
+}
+#register .container form {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 3px 0 rgb(0 0 0 / 0.5);
+}
+#register .container form label:not([class]) {
+    display: block;
+    margin: 8px 0;
+}
+#register .container form label {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+form input[type='checkbox'],
+form .checkbox {
+    cursor: pointer;
+}
+form .checkbox {
+    margin-left: 8px;
+}
+form input[type='checkbox'] {
+    width: 1em;
+    height: 1em;
+}
+form input:not([type='checkbox']),
+form textarea,
+form select {
+    width: 100%;
+    outline: none;
+    padding: 8px;
+    border: 1px solid #bcbbbb;
+    border-radius: 4px;
+}
+form div {
+    margin-bottom: 4px;
+}
+form input[type='submit'] {
+    background-color: #f4be0b;
+    font-weight:800;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1.3em;
+    color: #3d1d09;
+    transition: background-color 0.5s;
+    cursor: pointer;
+    margin-top: 8px;
+}
+form input[type='submit']:hover {
+    background-color: #f6c21f;
+}
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #000;
+}
+form select,
+form select option {
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+}
+form select {
+    background-color: transparent;
+}
+form textarea {
+    max-width: 100%;
+}
+form input,
+form textarea {
+    font-size: 1em;
+    font-weight: bold;
+    font-family: inherit;
+}
+@media (min-width: 1000px) {
+    #register {
+        font-size: 18px;
+    }
+}
+@media (min-width: 1400px) {
+    #register {
+        font-size: 22px;
+    }
+}
+/* footer section styling */
+footer {
+    background-color: #145e49;
+    padding: 8px;
+}
+footer .container {
+    width: min(90%, 620px);
+    margin: 0 auto;
+    position: relative;
+}
+footer .container ul {
+    display: flex;
+    justify-content: center;
+}
+footer .container ul {
+    list-style: none;
+    margin: 20px 20px 20px 0;
+}
+footer span {
+    color: #f4be0b;
+    font-weight: bold;
+}
+footer .container ul li {
+    margin-right: 24px;
+}
+footer .container ul i {
+    font-size: 1.3em;
+    color: #f4be0b;
+    transition: 0.5s;
+}
+footer .container p {
+    font-size: 1.1em;
+}
+footer .container p:last-child {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+footer .container ul li a i:hover {
+    color: #14C4C7;
+}
+footer .container::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -40px;
+    background-color: #D9D9D9;
+}
+footer > p {
+    text-align: center;
+}
+/* media for responsiveness */
+@media (min-width: 1029px) {
+    footer {
+        font-size: 1.2rem;
+    }
+}
+@media (min-width: 1462px) {
+    footer {
+        font-size: 1.4rem;
+    }
+}
